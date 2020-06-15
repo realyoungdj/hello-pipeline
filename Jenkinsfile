@@ -6,6 +6,7 @@ pipeline {
             steps {
                 sh 'echo hello'
                 sh 'mvn --version'
+                sh 'env'
             }
         }
     }

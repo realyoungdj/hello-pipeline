@@ -5,6 +5,7 @@ pipeline {
         stage('PreBuild') {
             steps {
                 sh 'echo hello'
+                sh 'mvn --version'
             }
         }
     }

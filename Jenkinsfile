@@ -9,5 +9,11 @@ pipeline {
                 sh 'env'
             }
         }
+        stage('PreBuild 2') {
+            steps {
+                sh 'pwd'
+                sh 'who'
+            }
+        }
     }
 }

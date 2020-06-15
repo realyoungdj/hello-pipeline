@@ -15,5 +15,15 @@ pipeline {
                 sh 'who'
             }
         }
+        stage('Maven Clean') {
+            steps {
+                sh 'mvn clean'
+            }
+        }
+        stage('Maven Build') {
+            steps {
+                sh 'mvn build -DskipTest=true'
+            }
+        }
     }
 }

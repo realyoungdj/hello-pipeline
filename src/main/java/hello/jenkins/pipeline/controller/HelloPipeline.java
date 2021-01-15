@@ -1,5 +1,6 @@
 package hello.jenkins.pipeline.controller;
 
+import hello.jenkins.pipeline.entity.PPResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -9,9 +10,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/pp")
 public class HelloPipeline {
 
-    @GetMapping("/greeting")
+    @GetMapping(path="/greeting", produces = "application/json;charset=UTF-8")
     @CrossOrigin(origins = "*")
-    public String greetingPipeline() {
-        return "Hello Jenkins Pipeline";
+    public PPResponseEntity greetingPipeline() {
+        return new PPResponseEntity("Hello Jenkins Pipeline.");
     }
 }

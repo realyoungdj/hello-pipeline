@@ -37,7 +37,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                deploy adapters: [tomcat9(credentialsId: '83e53922-fa50-4c02-8dc8-faee8ec964ae', path: '', url: 'http://localhost:9090')], contextPath: null, war: 'target/hello-pp.war'
+                deploy adapters: [tomcat9(credentialsId: '226f4898-b921-4d18-a796-66b90361e4ca', path: '', url: 'http://localhost:9090')], contextPath: null, war: 'target/hello-pp.war'
             }
         }
         stage('After Deploy') {

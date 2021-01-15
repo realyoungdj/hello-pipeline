@@ -42,7 +42,7 @@ pipeline {
         }
         stage('After Deploy') {
             steps {
-                emailext body: '$DEFAULT_CONTENT', subject: '$DEFAULT_SUBJECT', to: 'dev@djxy.de'
+                emailext body: 'test', subject: 'sub', to: 'dev@djxy.de'
             }
         }
     }
